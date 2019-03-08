@@ -24,17 +24,17 @@ public class Log extends Model<Log> {
      * 日志主键自增长ID
      */
     @TableId(value = "log_id", type = IdType.AUTO)
-    private Integer log_id;
+    private Integer logId;
 
     /**
      * 日志类型
      */
-    private String log_type;
+    private String logType;
 
     /**
      * 日志创建时间
      */
-    private Date log_time;
+    private Date logTime;
 
     /**
      * 工作地点
@@ -49,28 +49,28 @@ public class Log extends Model<Log> {
     /**
      * 工作内容
      */
-    private String job_content;
+    private String jobContent;
 
     public Integer getLog_id() {
-        return log_id;
+        return logId;
     }
 
     public void setLog_id(Integer log_id) {
-        this.log_id = log_id;
+        this.logId = log_id;
     }
     public String getLog_type() {
-        return log_type;
+        return logType;
     }
 
     public void setLog_type(String log_type) {
-        this.log_type = log_type;
+        this.logType = log_type;
     }
     public Date getLog_time() {
-        return log_time;
+        return logTime;
     }
 
     public void setLog_time(Date log_time) {
-        this.log_time = log_time;
+        this.logTime = log_time;
     }
     public String getWorkspace() {
         return workspace;
@@ -87,27 +87,27 @@ public class Log extends Model<Log> {
         this.workout = workout;
     }
     public String getJob_content() {
-        return job_content;
+        return jobContent;
     }
 
     public void setJob_content(String job_content) {
-        this.job_content = job_content;
+        this.jobContent = job_content;
     }
 
     @Override
     protected Serializable pkVal() {
-        return this.log_id;
+        return this.logId;
     }
 
     @Override
     public String toString() {
         return "Log{" +
-        "log_id=" + log_id +
-        ", log_type=" + log_type +
-        ", log_time=" + log_time +
+        "logId=" + logId +
+        ", logType=" + logType +
+        ", logTime=" + logTime +
         ", workspace=" + workspace +
         ", workout=" + workout +
-        ", job_content=" + job_content +
+        ", jobContent=" + jobContent +
         "}";
     }
 }

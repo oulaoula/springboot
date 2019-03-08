@@ -41,7 +41,7 @@ public class Employee extends Model<Employee> {
     /**
      * 部门名称
      */
-    private String dept_name;
+    private String deptName;
 
     public Integer getId() {
         return id;
@@ -72,11 +72,11 @@ public class Employee extends Model<Employee> {
         this.role = role;
     }
     public String getDept_name() {
-        return dept_name;
+        return deptName;
     }
 
     public void setDept_name(String dept_name) {
-        this.dept_name = dept_name;
+        this.deptName = dept_name;
     }
 
     @Override
@@ -91,7 +91,7 @@ public class Employee extends Model<Employee> {
         ", name=" + name +
         ", password=" + password +
         ", role=" + role +
-        ", dept_name=" + dept_name +
+        ", deptName=" + deptName +
         "}";
     }
 }

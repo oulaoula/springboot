@@ -21,38 +21,38 @@ public class Role extends Model<Role> {
      * 角色主键id，自增长
      */
     @TableId(value = "role_id", type = IdType.AUTO)
-    private Integer role_id;
+    private Integer roleId;
 
     /**
      * 角色代表名
      */
-    private String role_name;
+    private String roleName;
 
     public Integer getRole_id() {
-        return role_id;
+        return roleId;
     }
 
     public void setRole_id(Integer role_id) {
-        this.role_id = role_id;
+        this.roleId = role_id;
     }
     public String getRole_name() {
-        return role_name;
+        return roleName;
     }
 
     public void setRole_name(String role_name) {
-        this.role_name = role_name;
+        this.roleName = role_name;
     }
 
     @Override
     protected Serializable pkVal() {
-        return this.role_id;
+        return this.roleId;
     }
 
     @Override
     public String toString() {
         return "Role{" +
-        "role_id=" + role_id +
-        ", role_name=" + role_name +
+        "roleId=" + roleId +
+        ", roleName=" + roleName +
         "}";
     }
 }

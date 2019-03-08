@@ -26,12 +26,12 @@ public class RoleController {
     @ResponseBody
     @RequestMapping("/")
     public String index(){
-        int i = roleMapper.deleteById(3);
-//        System.out.println(roleList.size());
-//        for (Role role:roleList
-//             ) {
-        System.out.println(i);
-//        }
+        List<Role> roleList = roleMapper.selectList(null);
+        System.out.println(roleList.size());
+        for (Role role:roleList
+             ) {
+        System.out.println(role);
+        }
         return "welcome to here!";
     }
 }
