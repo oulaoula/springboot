@@ -10,6 +10,34 @@
         <result column="workspace" property="workspace" />
         <result column="workout" property="workout" />
         <result column="job_content" property="job_content" />
+        <result column="status" property="status" />
+        <result column="flag" property="flag" />
     </resultMap>
-
+    <sql id="Base_Column_List">
+    log_id, log_type, log_time, workspace, workout,job_content，status,flag
+    </sql>
+    <!--查询出未上报的日志-->
+    <select id="getLogById" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"></include>
+        from log where status = 1 and employee_id = #{employeeId}
+    </select>
+    <!--查询出该员工已上报但未审核的日志-->
+    <select id="getAllLogById" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"></include>
+        from log where status = 2 and flag = 1 and employee_id = #{employeeId}
+    </select>
+    <!--查询出所有员工已上报但未审核的日志-->
+    <select id="getAllLogReported" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"></include>
+        from log where status = 2 and flag = 1
+    </select>
+    <!--查询出已审核的日志-->
+    <select id="getAllLogChecked" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"></include>
+        from log where status = 2 and flag = 2
+    </select>
+    <!--上报日志-->
+    <update id="updateById">
+        update log set status = 2 where id=#{id}
+    </update>
 </mapper>

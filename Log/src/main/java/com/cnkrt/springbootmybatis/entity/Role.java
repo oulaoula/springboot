@@ -32,15 +32,15 @@ public class Role extends Model<Role> {
         return roleId;
     }
 
-    public void setRole_id(Integer role_id) {
-        this.roleId = role_id;
+    public void setRole_id(Integer roleId) {
+        this.roleId = roleId;
     }
     public String getRole_name() {
         return roleName;
     }
 
-    public void setRole_name(String role_name) {
-        this.roleName = role_name;
+    public void setRole_name(String roleName) {
+        this.roleName = roleName;
     }
 
     @Override

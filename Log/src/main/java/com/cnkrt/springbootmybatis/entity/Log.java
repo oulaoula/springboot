@@ -51,26 +51,44 @@ public class Log extends Model<Log> {
      */
     private String jobContent;
 
+
+    /**
+     *
+     * 日志状态。1：未上报2：已上报
+     */
+    private  int status;
+
+    /**
+     *
+     * 审核状态。1：未审核2：已审核
+     */
+    private int flag;
+
+    /**
+     * 员工id
+     */
+    private int employeeId;
+
     public Integer getLog_id() {
         return logId;
     }
 
-    public void setLog_id(Integer log_id) {
-        this.logId = log_id;
+    public void setLog_id(Integer logId) {
+        this.logId = logId;
     }
     public String getLog_type() {
         return logType;
     }
 
-    public void setLog_type(String log_type) {
-        this.logType = log_type;
+    public void setLog_type(String logType) {
+        this.logType = logType;
     }
     public Date getLog_time() {
         return logTime;
     }
 
-    public void setLog_time(Date log_time) {
-        this.logTime = log_time;
+    public void setLog_time(Date logTime) {
+        this.logTime = logTime;
     }
     public String getWorkspace() {
         return workspace;
@@ -90,8 +108,31 @@ public class Log extends Model<Log> {
         return jobContent;
     }
 
-    public void setJob_content(String job_content) {
-        this.jobContent = job_content;
+    public void setJob_content(String jobContent) {
+        this.jobContent = jobContent;
+    }
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public void setFlag(int flag) {
+        this.flag = flag;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
     @Override
@@ -108,6 +149,9 @@ public class Log extends Model<Log> {
         ", workspace=" + workspace +
         ", workout=" + workout +
         ", jobContent=" + jobContent +
+        ", status=" + status +
+        ", flag=" + flag +
+        ", employeeId=" + employeeId +
         "}";
     }
 }

@@ -1,6 +1,7 @@
 package com.cnkrt.springbootmybatis.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
@@ -31,16 +32,19 @@ public class Employee extends Model<Employee> {
     /**
      * 用户密码，用户通过用户名和密码登录
      */
-    private Integer password;
+    private String password;
 
     /**
      * 用户权限id
      */
     private String role;
 
+
+
     /**
      * 部门名称
      */
+    @TableField(value = "dept_name")
     private String deptName;
 
     public Integer getId() {
@@ -57,11 +61,11 @@ public class Employee extends Model<Employee> {
     public void setName(String name) {
         this.name = name;
     }
-    public Integer getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Integer password) {
+    public void setPassword(String password) {
         this.password = password;
     }
     public String getRole() {
@@ -71,12 +75,13 @@ public class Employee extends Model<Employee> {
     public void setRole(String role) {
         this.role = role;
     }
-    public String getDept_name() {
+
+    public String getDeptName() {
         return deptName;
     }
 
-    public void setDept_name(String dept_name) {
-        this.deptName = dept_name;
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
     }
 
     @Override

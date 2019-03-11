@@ -23,15 +23,5 @@ package com.cnkrt.springbootmybatis.controller;
 public class RoleController {
     @Autowired
     private RoleMapper roleMapper;
-    @ResponseBody
-    @RequestMapping("/")
-    public String index(){
-        List<Role> roleList = roleMapper.selectList(null);
-        System.out.println(roleList.size());
-        for (Role role:roleList
-             ) {
-        System.out.println(role);
-        }
-        return "welcome to here!";
-    }
+
 }

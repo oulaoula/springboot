@@ -32,15 +32,15 @@ public class Dept extends Model<Dept> {
         return deptNo;
     }
 
-    public void setDept_no(Integer dept_no) {
-        this.deptNo = dept_no;
+    public void setDept_no(Integer deptNo) {
+        this.deptNo = deptNo;
     }
     public String getDept_name() {
         return deptName;
     }
 
-    public void setDept_name(String dept_name) {
-        this.deptName = dept_name;
+    public void setDept_name(String deptName) {
+        this.deptName = deptName;
     }
 
     @Override
